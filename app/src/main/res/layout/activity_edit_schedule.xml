@@ -1,0 +1,123 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.EditScheduleActivity"
+    android:background="#F8F8F8"
+    android:padding="16dp">
+
+    <!-- 标题TextView -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改日程"
+        android:textSize="36sp"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp" />
+
+    <!-- 标题输入框 -->
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:hint="请输入标题"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:background="@drawable/edit_text_bg"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        android:importantForAccessibility="yes"/>
+
+    <!-- 内容输入框 -->
+    <EditText
+        android:id="@+id/contentEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="请输入内容"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:background="@drawable/edit_text_bg"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleEditText"
+        android:importantForAccessibility="yes"/>
+
+    <!-- 设置日期按钮 -->
+    <Button
+        android:id="@+id/setDateButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="设置提醒日期"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="12dp"
+        app:layout_constraintEnd_toStartOf="@id/setTimeButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contentEditText"
+        android:importantForAccessibility="yes"
+        android:layout_marginTop="32dp"/>
+
+    <!-- 设置时间按钮 -->
+    <Button
+        android:id="@+id/setTimeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="设置提醒时间"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/setDateButton"
+        app:layout_constraintTop_toBottomOf="@id/contentEditText"
+        android:importantForAccessibility="yes"
+        android:layout_marginTop="32dp"/>
+
+    <!-- 修改按钮 -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="修 改"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_button"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setTimeButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:importantForAccessibility="yes"
+        android:layout_marginTop="24dp"/>
+
+    <!-- 删除按钮 -->
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="删 除"
+        android:textSize="16sp"
+        android:textColor="#DDFFFFFF"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#C15E5E"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saveButton"
+        android:importantForAccessibility="yes"
+        android:layout_marginTop="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
