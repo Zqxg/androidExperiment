@@ -1,6 +1,7 @@
 package com.example.daily_new.view;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ public class HomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Log.d("HomeFragment", "onCreateView");
         return inflater.inflate(R.layout.activity_retirement, container, false);
     }
 }

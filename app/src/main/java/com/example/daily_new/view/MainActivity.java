@@ -19,28 +19,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        viewPager = findViewById(R.id.viewPager);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
         // 设置适配器
+        viewPager = findViewById(R.id.viewPager);
         ViewPagerAdapter adapter = new ViewPagerAdapter(this);
         viewPager.setAdapter(adapter);
 
+
         // 处理底部导航与 ViewPager 联动
         bottomNavigationView.setOnItemSelectedListener(item -> {
-            switch (item.getItemId()) {
-                case R.id.nav_home:
-                    viewPager.setCurrentItem(0);
-                    break;
-                case R.id.nav_memo:
-                    viewPager.setCurrentItem(1);
-                    break;
-                case R.id.nav_custom:
-                    viewPager.setCurrentItem(2);
-                    break;
-                case R.id.nav_profile:
-                    viewPager.setCurrentItem(3);
-                    break;
+            int id = item.getItemId();
+            if (id == R.id.nav_home) {
+                viewPager.setCurrentItem(0);
+            } else if (id == R.id.nav_memo) {
+                viewPager.setCurrentItem(1);
+            } else if (id == R.id.nav_custom) {
+                viewPager.setCurrentItem(2);
+            } else if (id == R.id.nav_profile) {
+                viewPager.setCurrentItem(3);
             }
             return true;
         });

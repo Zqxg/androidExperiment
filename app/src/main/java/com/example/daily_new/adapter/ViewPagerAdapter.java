@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import com.example.daily_new.view.CustomFragment;
 import com.example.daily_new.view.HomeFragment;
 import com.example.daily_new.view.ProfileFragment;
 import com.example.daily_new.view.ScheduleFragment;
