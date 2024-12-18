@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 viewPager.setCurrentItem(0);
             } else if (id == R.id.nav_memo) {
                 viewPager.setCurrentItem(1);
-            } else if (id == R.id.nav_custom) {
+            } else if (id == R.id.nav_integration) {
                 viewPager.setCurrentItem(2);
             } else if (id == R.id.nav_profile) {
                 viewPager.setCurrentItem(3);

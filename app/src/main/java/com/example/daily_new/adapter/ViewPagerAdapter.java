@@ -6,7 +6,9 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.daily_new.view.CustomFragment;
+import com.example.daily_new.view.GuessNumberFragment;
 import com.example.daily_new.view.HomeFragment;
+import com.example.daily_new.view.IntegrationFragment;
 import com.example.daily_new.view.ProfileFragment;
 import com.example.daily_new.view.ScheduleFragment;
 
@@ -24,9 +26,9 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
             case 1:
                 return new ScheduleFragment();
             case 2:
-                return new CustomFragment();
+                return new IntegrationFragment();
             case 3:
-                return new ProfileFragment();
+                return new GuessNumberFragment();
             default:
                 return new HomeFragment();
         }
